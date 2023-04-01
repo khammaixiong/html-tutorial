@@ -1,0 +1,81 @@
+* {
+	font-family: segoe-vf, sans-serif;
+}
+body {
+	max-width: 1000px;
+	margin: auto;
+	padding-top: 50px;
+}
+.ironman {
+	background-color: #f2f2f2;
+	display: flex;
+	width: 100%;
+	position: relative;
+	padding: 20px;
+}
+.common-background {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.common-background img {
+	width: 50%;
+	position: relative;
+	transform: scale(1.5);
+	top: -15px;
+	animation: image-scale 1s ease-in-out;
+}
+@keyframes image-scale {
+	0% {
+		transform: scale(0.5);
+		transform: translateY(50px);
+	}
+	100% {
+		transform: scale(1.5);
+	}
+}
+.ironman h2 {
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 1.5;
+	letter-spacing: -0.0125em;
+}
+.ironman p {
+	font-weight: 400;
+	line-height: 25px;
+}
+.learn-btn {
+	background-color: #333;
+	appearance: none;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	white-space: normal !important;
+	color: #fff;
+	display: inline-flex;
+	text-overflow: ellipsis;
+	padding: 0.5em 1.5em 0.6em;
+	text-decoration: none;
+	border-radius: 8px;
+	font-weight: 300;
+}
+.title-show {
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: show-title 2s ease-in-out;
+}
+@keyframes show-title {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+.shining {
+	background: linear-gradient(90deg, #95b4ab 10%, #8136d4 40%, #9881e6 60%, #95b4ab 90%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
