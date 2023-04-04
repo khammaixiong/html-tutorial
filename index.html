@@ -4,21 +4,151 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Task 1</title>
-		<link rel="stylesheet" href="style.css" />
+		<title>Blogs</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+			* {
+				margin: 0px;
+				padding: 0px;
+				box-sizing: border-box;
+				font-family: 'Merriweather Sans', sans-serif;
+			}
+			body {
+				background-color: #eff4ff;
+			}
+
+			.navbar {
+				width: 100%;
+				height: 80px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.container {
+				width: 100%;
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+
+			.header {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.header ul {
+				display: flex;
+				list-style: none;
+				gap: 15px;
+			}
+
+			.header a {
+				text-decoration: none;
+				color: black;
+			}
+
+			.header a {
+				position: relative;
+			}
+			.header a::after {
+				content: '';
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+				width: 0;
+				height: 2px;
+				background-color: rgba(0, 0, 0, 0.5);
+				transition: width 0.5s ease-in-out;
+			}
+			.header a:hover::after {
+				width: 100%;
+			}
+
+			/* Mains */
+			.featured-games {
+				display: flex;
+				width: 100%;
+				gap: 10px;
+			}
+
+			.featured-games .image {
+				width: calc(25% - 5px);
+			}
+
+			.featured-games .image img {
+				width: 100%;
+			}
+
+			/* Keyframes */
+			@keyframes menubar-decoration {
+				0% {
+					text-decoration-thickness: 0.1em;
+					text-decoration-color: transparent;
+					width: 0;
+				}
+				100% {
+					text-decoration-thickness: 0.2em;
+					text-decoration-color: black;
+					width: 50px;
+				}
+			}
+
+			/* Media Screens */
+			@media (min-width: 321px) and (max-width: 767px) {
+				.container {
+					max-width: 100%;
+					padding: 10px;
+				}
+			}
+			@media (min-width: 767px) and (max-width: 1024px) {
+				.container {
+					max-width: 700px;
+					margin: auto;
+				}
+			}
+			@media (min-width: 1024px) {
+				.container {
+					max-width: 1000px;
+					margin: auto;
+				}
+			}
+		</style>
 	</head>
 	<body>
-		<div class="ironman">
-			<div class="common-background">
-				<img src="https://edgestatic-ehf9gbe6gfdfdec4.z01.azurefd.net/shared/edgeweb/img/gaming-overlay.500addf.png" alt="" />
-			</div>
-			<div>
-				<div class="title-show">
-					<h2 class="shining">Use the best browser for gaming</h2>
+		<header>
+			<div class="navbar">
+				<div class="container">
+					<div class="header">
+						<div>CSL vault</div>
+						<div>
+							<ul>
+								<li>
+									<a href="#"> Promotions </a>
+								</li>
+								<li>
+									<a href="#"> Invite and Earn </a>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-				<p>Thanks to cloud gaming optimizations like Clarity Boost, a memory-saving efficiency mode, and support for popular themes and extensions, Microsoft Edge is the best browser for gaming on the web, giving you access to thousands of free games.</p>
-				<a href="/index.html" class="learn-btn">Learn More</a>
 			</div>
-		</div>
+		</header>
+		<main class="container">
+			<h3>Featured Games</h3>
+			<div class="featured-games">
+				<div class="image">
+					<img src="https://cdn.cslvault.com/tc/assets/component_contents/featured_content1/6d4cdc75-154b-4ec7-88c6-adaac714bc4b.png" alt="Featured Games 1" />
+				</div>
+				<div class="image">
+					<img src="https://cdn.cslvault.com/tc/assets/component_contents/featured_content1/6d4cdc75-154b-4ec7-88c6-adaac714bc4b.png" alt="Featured Games 1" />
+				</div>
+				<div class="image">
+					<img src="https://cdn.cslvault.com/tc/assets/component_contents/featured_content1/6d4cdc75-154b-4ec7-88c6-adaac714bc4b.png" alt="Featured Games 1" />
+				</div>
+				<div class="image">
+					<img src="https://cdn.cslvault.com/tc/assets/component_contents/featured_content1/6d4cdc75-154b-4ec7-88c6-adaac714bc4b.png" alt="Featured Games 1" />
+				</div>
+			</div>
+		</main>
 	</body>
 </html>
